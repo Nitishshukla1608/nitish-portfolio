@@ -18,6 +18,8 @@ import {
   ChevronUp,
   ExternalLink,
 } from "lucide-react";
+import { FaFacebookF } from "react-icons/fa";
+import { SiLeetcode } from "react-icons/si";
 
 import profileImage from "./assets/hero.png";
 import resume from "./assets/LinkedIn Resume - Nitish Shukla.pdf";
@@ -242,6 +244,13 @@ const SOCIALS = [
     label: "Instagram",
     href: "https://www.instagram.com/nitishshuklaa/?hl=en",
     Icon: Instagram,
+  },
+
+
+  {
+    label: "LeetCode",
+    href: "https://leetcode.com/u/Nitishshukla1608/",
+    Icon: SiLeetcode,
   },
 ];
 
