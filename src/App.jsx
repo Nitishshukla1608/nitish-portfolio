@@ -10,7 +10,7 @@ import {
   ArrowUpRight,
   Menu,
   X as CloseIcon,
-  FileText,
+  FileDown,
   Code2,
   Sparkles,
   Database,
@@ -150,6 +150,7 @@ const PROJECTS = [
       "OAuth2",
     ],
   },
+
   {
     file: "taskflow.jsx",
     name: "TaskFlow",
@@ -165,8 +166,15 @@ const PROJECTS = [
       "EmailJS-driven flows for verification, temporary credentials, and password recovery",
       "Metadata-driven subscription tiers enforcing per-organization limits and features",
     ],
-    tech: ["React", "Firestore", "Agora SDK", "EmailJS", "RBAC"],
+    tech: [
+      "React",
+      "Firestore",
+      "Agora SDK",
+      "EmailJS",
+      "RBAC",
+    ],
   },
+
   {
     file: "xcrypto.jsx",
     name: "Xcrypto",
@@ -180,7 +188,11 @@ const PROJECTS = [
       "Contextual AI assistant with a modular blog for asset insights and research",
       "Authentication-backed watch history and metadata-driven premium access tiers",
     ],
-    tech: ["React", "CoinGecko API", "Firebase Auth"],
+    tech: [
+      "React",
+      "CoinGecko API",
+      "Firebase Auth",
+    ],
   },
 ];
 
@@ -191,12 +203,14 @@ const EDUCATION = [
     period: "Sep 2024 — Present",
     detail: "GPA 8/10 through second year",
   },
+
   {
     title: "Intermediate, Science",
     place: "SDSVMIC",
     period: "Apr 2022 — Apr 2023",
     detail: "GPA 8.5/10",
   },
+
   {
     title: "High School, Science",
     place: "SDSVMIC",
@@ -211,16 +225,19 @@ const SOCIALS = [
     href: "https://github.com/Nitishshukla1608",
     Icon: Github,
   },
+
   {
     label: "LinkedIn",
     href: "https://www.linkedin.com/in/nitish-shukla-dev/",
     Icon: Linkedin,
   },
+
   {
     label: "X",
     href: "https://x.com/Nitishs22733118",
     Icon: Twitter,
   },
+
   {
     label: "Instagram",
     href: "https://www.instagram.com/nitishshuklaa/?hl=en",
@@ -280,7 +297,9 @@ export default function Portfolio() {
 
   return (
     <div className="site">
+
       <style>{`
+
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap');
 
         * {
@@ -306,17 +325,21 @@ export default function Portfolio() {
           --panel-hover: #151823;
           --border: rgba(255,255,255,0.08);
           --border-strong: rgba(255,255,255,0.14);
+
           --text: #f4f4f7;
           --muted: #8f94a3;
           --muted-light: #b9bdc9;
+
           --accent: #9b6cff;
           --accent-2: #6d4aff;
           --accent-soft: #cdbdff;
+
           --green: #74f0b2;
 
           min-height: 100vh;
           width: 100%;
           overflow-x: hidden;
+
           background:
             radial-gradient(
               circle at 50% -10%,
@@ -327,6 +350,7 @@ export default function Portfolio() {
 
           color: var(--text);
           font-family: "Inter", sans-serif;
+
           -webkit-font-smoothing: antialiased;
         }
 
@@ -355,6 +379,7 @@ export default function Portfolio() {
           z-index: 2;
           scroll-margin-top: 90px;
         }
+
 
         /* =====================================================
            BACKGROUND
@@ -389,17 +414,25 @@ export default function Portfolio() {
 
         .background-glow {
           position: fixed;
+
           width: 500px;
           height: 500px;
+
           top: -250px;
           left: 50%;
+
           transform: translateX(-50%);
+
           background: rgba(109, 74, 255, 0.16);
+
           filter: blur(120px);
+
           border-radius: 50%;
+
           pointer-events: none;
           z-index: 0;
         }
+
 
         /* =====================================================
            NAVBAR
@@ -430,18 +463,23 @@ export default function Portfolio() {
 
         .nav.scrolled {
           background: rgba(7, 8, 12, 0.72);
+
           backdrop-filter: blur(18px);
+
           border-bottom-color: var(--border);
         }
 
         .brand {
           display: flex;
           align-items: center;
+
           gap: 11px;
 
           font-family: "Space Grotesk", sans-serif;
+
           font-size: 16px;
           font-weight: 700;
+
           letter-spacing: -0.02em;
         }
 
@@ -454,6 +492,7 @@ export default function Portfolio() {
           justify-content: center;
 
           border: 1px solid rgba(155,108,255,.55);
+
           border-radius: 10px;
 
           color: var(--accent-soft);
@@ -469,12 +508,14 @@ export default function Portfolio() {
             0 0 25px rgba(109,74,255,.12);
 
           font-family: "IBM Plex Mono", monospace;
+
           font-size: 12px;
         }
 
         .nav-links {
           display: flex;
           align-items: center;
+
           gap: 30px;
         }
 
@@ -485,6 +526,7 @@ export default function Portfolio() {
           color: var(--muted);
 
           font-size: 13.5px;
+
           cursor: pointer;
 
           padding: 5px 0;
@@ -498,6 +540,7 @@ export default function Portfolio() {
           content: "";
 
           position: absolute;
+
           left: 0;
           bottom: -5px;
 
@@ -534,12 +577,15 @@ export default function Portfolio() {
           justify-content: center;
 
           border: 1px solid var(--border-strong);
+
           background: rgba(255,255,255,.03);
 
           border-radius: 9px;
+
           padding: 9px;
 
           color: var(--text);
+
           cursor: pointer;
 
           transition:
@@ -549,6 +595,7 @@ export default function Portfolio() {
 
         .menu-btn:hover {
           background: rgba(155,108,255,.1);
+
           border-color: rgba(155,108,255,.4);
         }
 
@@ -564,17 +611,21 @@ export default function Portfolio() {
           }
         }
 
+
         /* =====================================================
            MOBILE MENU
         ===================================================== */
 
         .mobile-menu {
           position: fixed;
+
           inset: 0;
+
           z-index: 200;
 
           display: flex;
           flex-direction: column;
+
           align-items: center;
           justify-content: center;
 
@@ -598,6 +649,7 @@ export default function Portfolio() {
           color: var(--text);
 
           font-family: "Space Grotesk", sans-serif;
+
           font-size: 28px;
           font-weight: 600;
 
@@ -610,15 +662,18 @@ export default function Portfolio() {
 
         .mobile-menu button.item:hover {
           color: var(--accent-soft);
+
           transform: translateX(4px);
         }
 
         .mobile-close {
           position: absolute;
+
           top: 20px;
           right: 22px;
 
           border: 1px solid var(--border-strong);
+
           border-radius: 9px;
 
           background: rgba(255,255,255,.03);
@@ -626,12 +681,14 @@ export default function Portfolio() {
           padding: 9px;
 
           color: var(--text);
+
           cursor: pointer;
         }
 
         .mobile-mail {
           display: flex;
           align-items: center;
+
           gap: 8px;
 
           margin-top: 10px;
@@ -639,8 +696,10 @@ export default function Portfolio() {
           color: var(--accent-soft);
 
           font-family: "IBM Plex Mono", monospace;
+
           font-size: 12px;
         }
+
 
         /* =====================================================
            COMMON
@@ -648,6 +707,7 @@ export default function Portfolio() {
 
         .wrap {
           width: min(1180px, 100%);
+
           margin: 0 auto;
 
           padding:
@@ -657,8 +717,10 @@ export default function Portfolio() {
 
         .btn {
           display: inline-flex;
+
           align-items: center;
           justify-content: center;
+
           gap: 8px;
 
           padding: 13px 19px;
@@ -706,17 +768,21 @@ export default function Portfolio() {
 
         .btn-ghost {
           color: var(--text);
+
           border-color: var(--border-strong);
+
           background: rgba(255,255,255,.025);
         }
 
         .btn-ghost:hover {
           border-color: rgba(155,108,255,.5);
+
           background: rgba(155,108,255,.06);
         }
 
         .section-block {
           padding: clamp(80px, 11vw, 125px) 0;
+
           border-top: 1px solid var(--border);
         }
 
@@ -726,7 +792,9 @@ export default function Portfolio() {
 
         .section-number {
           display: inline-flex;
+
           align-items: center;
+
           gap: 10px;
 
           margin-bottom: 13px;
@@ -734,7 +802,9 @@ export default function Portfolio() {
           color: var(--accent-soft);
 
           font-family: "IBM Plex Mono", monospace;
+
           font-size: 11px;
+
           letter-spacing: .08em;
         }
 
@@ -749,6 +819,7 @@ export default function Portfolio() {
 
         .section-head h2 {
           font-size: clamp(30px, 4vw, 43px);
+
           letter-spacing: -.04em;
         }
 
@@ -760,8 +831,10 @@ export default function Portfolio() {
           color: var(--muted);
 
           font-size: 14.5px;
+
           line-height: 1.75;
         }
+
 
         /* =====================================================
            HERO
@@ -778,6 +851,7 @@ export default function Portfolio() {
             75px;
 
           position: relative;
+
           z-index: 2;
         }
 
@@ -796,7 +870,9 @@ export default function Portfolio() {
 
         .hero-left {
           display: flex;
+
           flex-direction: column;
+
           align-items: flex-start;
         }
 
@@ -804,12 +880,15 @@ export default function Portfolio() {
           color: var(--accent-soft);
 
           font-family: "IBM Plex Mono", monospace;
+
           font-size: 12px;
 
           margin-bottom: 13px;
 
           display: flex;
+
           align-items: center;
+
           gap: 8px;
         }
 
@@ -823,13 +902,17 @@ export default function Portfolio() {
 
           background: var(--green);
 
-          box-shadow: 0 0 12px rgba(116,240,178,.7);
+          box-shadow:
+            0 0 12px rgba(116,240,178,.7);
         }
 
         .hero-name {
           font-size: clamp(38px, 5vw, 64px);
+
           line-height: 1;
+
           letter-spacing: -.055em;
+
           font-weight: 700;
         }
 
@@ -856,25 +939,37 @@ export default function Portfolio() {
           color: var(--muted);
 
           font-size: 14px;
+
           line-height: 1.75;
         }
 
         .hero-actions {
           display: flex;
+
           flex-wrap: wrap;
+
           gap: 11px;
 
           margin-top: 28px;
         }
 
+
+        /* =====================================================
+           HERO VISUAL
+        ===================================================== */
+
         .hero-visual {
           min-height: 450px;
 
           display: flex;
+
           align-items: center;
+
           justify-content: center;
 
           position: relative;
+
+          overflow: visible;
         }
 
         .hero-orbit {
@@ -887,7 +982,8 @@ export default function Portfolio() {
 
           border-radius: 50%;
 
-          animation: rotateOrbit 20s linear infinite;
+          animation:
+            rotateOrbit 20s linear infinite;
         }
 
         .hero-orbit::before,
@@ -950,16 +1046,20 @@ export default function Portfolio() {
           width: min(310px, 72vw);
 
           position: relative;
+
           z-index: 3;
 
           display: flex;
+
           justify-content: center;
 
-          animation: heroFloat 5s ease-in-out infinite;
+          animation:
+            heroFloat 5s ease-in-out infinite;
         }
 
         @keyframes heroFloat {
-          0%, 100% {
+          0%,
+          100% {
             transform: translateY(0);
           }
 
@@ -972,6 +1072,7 @@ export default function Portfolio() {
           content: "";
 
           position: absolute;
+
           inset: 15% 15% 5%;
 
           border-radius: 50%;
@@ -1013,13 +1114,20 @@ export default function Portfolio() {
             );
         }
 
+
+        /* =====================================================
+           FLOATING BADGES
+        ===================================================== */
+
         .floating-badge {
           position: absolute;
 
-          z-index: 5;
+          z-index: 8;
 
           display: flex;
+
           align-items: center;
+
           gap: 7px;
 
           padding: 9px 12px;
@@ -1028,43 +1136,83 @@ export default function Portfolio() {
 
           border-radius: 9px;
 
-          background: rgba(14,16,22,.78);
+          background:
+            rgba(14,16,22,.82);
 
           backdrop-filter: blur(12px);
 
           color: var(--muted-light);
 
-          font-family: "IBM Plex Mono", monospace;
+          font-family:
+            "IBM Plex Mono",
+            monospace;
+
           font-size: 10px;
+
+          white-space: nowrap;
 
           box-shadow:
             0 15px 40px rgba(0,0,0,.28);
+
+          animation:
+            badgeFloat 4s ease-in-out infinite;
         }
 
-        .badge-ai {
-          top: 75px;
-          left: 4px;
+        /* RAG & AI */
+
+        .badge-rag {
+          top: 72px;
+
+          left: 8px;
+
+          animation-delay: 0s;
         }
+
+        /* Full Stack */
 
         .badge-stack {
-          bottom: 80px;
-          right: 0;
+          right: 2px;
+
+          bottom: 72px;
+
+          animation-delay: 2s;
         }
 
         .badge-dot {
           width: 6px;
           height: 6px;
 
+          flex-shrink: 0;
+
           border-radius: 50%;
 
           background: var(--green);
 
-          box-shadow: 0 0 10px var(--green);
+          box-shadow:
+            0 0 10px var(--green);
         }
+
+        @keyframes badgeFloat {
+          0%,
+          100% {
+            transform: translateY(0);
+          }
+
+          50% {
+            transform: translateY(-7px);
+          }
+        }
+
+
+        /* =====================================================
+           HERO RIGHT
+        ===================================================== */
 
         .hero-right {
           display: flex;
+
           flex-direction: column;
+
           align-items: flex-end;
 
           text-align: right;
@@ -1073,7 +1221,10 @@ export default function Portfolio() {
         .hero-right-label {
           color: var(--accent-soft);
 
-          font-family: "IBM Plex Mono", monospace;
+          font-family:
+            "IBM Plex Mono",
+            monospace;
+
           font-size: 12px;
 
           margin-bottom: 8px;
@@ -1081,6 +1232,7 @@ export default function Portfolio() {
 
         .hero-role {
           font-size: clamp(27px, 3.2vw, 43px);
+
           line-height: 1.04;
 
           letter-spacing: -.045em;
@@ -1098,19 +1250,30 @@ export default function Portfolio() {
           color: var(--muted);
 
           font-size: 13.5px;
+
           line-height: 1.75;
         }
+
+
+        /* =====================================================
+           AVAILABILITY
+        ===================================================== */
 
         .availability {
           margin-top: 26px;
 
           display: inline-flex;
+
           align-items: center;
+
           gap: 9px;
 
-          border: 1px solid rgba(116,240,178,.15);
+          border:
+            1px solid
+            rgba(116,240,178,.15);
 
-          background: rgba(116,240,178,.035);
+          background:
+            rgba(116,240,178,.035);
 
           padding: 9px 13px;
 
@@ -1118,7 +1281,10 @@ export default function Portfolio() {
 
           color: #a7cdb9;
 
-          font-family: "IBM Plex Mono", monospace;
+          font-family:
+            "IBM Plex Mono",
+            monospace;
+
           font-size: 10.5px;
         }
 
@@ -1126,12 +1292,82 @@ export default function Portfolio() {
           width: 7px;
           height: 7px;
 
+          flex-shrink: 0;
+
           border-radius: 50%;
 
           background: var(--green);
 
-          box-shadow: 0 0 12px var(--green);
+          box-shadow:
+            0 0 12px var(--green);
         }
+
+
+        /* =====================================================
+           RESUME BUTTON
+        ===================================================== */
+
+        .hero-resume {
+          display: inline-flex;
+
+          align-items: center;
+
+          justify-content: center;
+
+          gap: 7px;
+
+          margin-top: 12px;
+
+          padding: 8px 12px;
+
+          border:
+            1px solid
+            rgba(155,108,255,.28);
+
+          border-radius: 8px;
+
+          color: var(--accent-soft);
+
+          background:
+            rgba(155,108,255,.055);
+
+          backdrop-filter: blur(10px);
+
+          font-family:
+            "IBM Plex Mono",
+            monospace;
+
+          font-size: 10px;
+
+          font-weight: 500;
+
+          transition:
+            transform .2s ease,
+            border-color .2s ease,
+            background .2s ease,
+            color .2s ease;
+        }
+
+        .hero-resume:hover {
+          transform: translateY(-2px);
+
+          color: #fff;
+
+          border-color:
+            rgba(155,108,255,.55);
+
+          background:
+            rgba(155,108,255,.12);
+        }
+
+        .hero-resume svg {
+          flex-shrink: 0;
+        }
+
+
+        /* =====================================================
+           HERO STATS
+        ===================================================== */
 
         .hero-bottom {
           display: flex;
@@ -1152,7 +1388,9 @@ export default function Portfolio() {
 
           font-size: 10px;
 
-          font-family: "IBM Plex Mono", monospace;
+          font-family:
+            "IBM Plex Mono",
+            monospace;
 
           text-transform: uppercase;
 
@@ -1164,12 +1402,15 @@ export default function Portfolio() {
 
           color: var(--text);
 
-          font-family: "Space Grotesk", sans-serif;
+          font-family:
+            "Space Grotesk",
+            sans-serif;
 
           font-size: 13px;
 
           font-weight: 600;
         }
+
 
         /* =====================================================
            SOCIAL RAIL
@@ -1186,6 +1427,7 @@ export default function Portfolio() {
           z-index: 20;
 
           display: flex;
+
           flex-direction: column;
 
           gap: 15px;
@@ -1196,16 +1438,20 @@ export default function Portfolio() {
           height: 34px;
 
           display: flex;
+
           align-items: center;
           justify-content: center;
 
-          border: 1px solid var(--border);
+          border:
+            1px solid
+            var(--border);
 
           border-radius: 8px;
 
           color: var(--muted);
 
-          background: rgba(10,11,15,.4);
+          background:
+            rgba(10,11,15,.4);
 
           transition:
             color .2s ease,
@@ -1216,9 +1462,11 @@ export default function Portfolio() {
         .social-rail a:hover {
           color: var(--accent-soft);
 
-          border-color: rgba(155,108,255,.4);
+          border-color:
+            rgba(155,108,255,.4);
 
-          transform: translateX(3px);
+          transform:
+            translateX(3px);
         }
 
         .social-rail::after {
@@ -1227,9 +1475,11 @@ export default function Portfolio() {
           width: 1px;
           height: 55px;
 
-          background: var(--border);
+          background:
+            var(--border);
 
-          margin: 4px auto 0;
+          margin:
+            4px auto 0;
         }
 
         @media (max-width: 1100px) {
@@ -1238,6 +1488,7 @@ export default function Portfolio() {
           }
         }
 
+
         /* =====================================================
            ABOUT
         ===================================================== */
@@ -1245,7 +1496,8 @@ export default function Portfolio() {
         .about-layout {
           display: grid;
 
-          grid-template-columns: 230px 1fr;
+          grid-template-columns:
+            230px 1fr;
 
           gap: 65px;
 
@@ -1263,9 +1515,12 @@ export default function Portfolio() {
 
           position: absolute;
 
-          inset: 12px -10px -10px 12px;
+          inset:
+            12px -10px -10px 12px;
 
-          border: 1px solid rgba(155,108,255,.25);
+          border:
+            1px solid
+            rgba(155,108,255,.25);
 
           border-radius: 18px;
 
@@ -1282,7 +1537,9 @@ export default function Portfolio() {
 
           border-radius: 18px;
 
-          border: 1px solid var(--border-strong);
+          border:
+            1px solid
+            var(--border-strong);
 
           filter: saturate(.9);
 
@@ -1295,7 +1552,9 @@ export default function Portfolio() {
 
           color: var(--muted);
 
-          font-family: "IBM Plex Mono", monospace;
+          font-family:
+            "IBM Plex Mono",
+            monospace;
 
           font-size: 10px;
 
@@ -1323,7 +1582,8 @@ export default function Portfolio() {
         .fact-grid {
           display: grid;
 
-          grid-template-columns: repeat(2, minmax(0, 1fr));
+          grid-template-columns:
+            repeat(2, minmax(0, 1fr));
 
           gap: 24px;
 
@@ -1333,13 +1593,17 @@ export default function Portfolio() {
         .fact {
           padding-top: 13px;
 
-          border-top: 1px solid var(--border);
+          border-top:
+            1px solid
+            var(--border);
         }
 
         .fact-key {
           color: var(--muted);
 
-          font-family: "IBM Plex Mono", monospace;
+          font-family:
+            "IBM Plex Mono",
+            monospace;
 
           font-size: 10px;
 
@@ -1354,6 +1618,7 @@ export default function Portfolio() {
           font-size: 13.5px;
         }
 
+
         /* =====================================================
            TOOLKIT
         ===================================================== */
@@ -1361,7 +1626,8 @@ export default function Portfolio() {
         .skill-grid {
           display: grid;
 
-          grid-template-columns: repeat(2, minmax(0, 1fr));
+          grid-template-columns:
+            repeat(2, minmax(0, 1fr));
 
           gap: 15px;
         }
@@ -1371,7 +1637,9 @@ export default function Portfolio() {
 
           padding: 25px;
 
-          border: 1px solid var(--border);
+          border:
+            1px solid
+            var(--border);
 
           border-radius: 15px;
 
@@ -1401,7 +1669,8 @@ export default function Portfolio() {
           top: -70px;
           right: -70px;
 
-          background: rgba(109,74,255,.13);
+          background:
+            rgba(109,74,255,.13);
 
           border-radius: 50%;
 
@@ -1409,9 +1678,11 @@ export default function Portfolio() {
         }
 
         .skill-card:hover {
-          transform: translateY(-4px);
+          transform:
+            translateY(-4px);
 
-          border-color: rgba(155,108,255,.28);
+          border-color:
+            rgba(155,108,255,.28);
 
           background:
             linear-gradient(
@@ -1423,7 +1694,9 @@ export default function Portfolio() {
 
         .skill-heading {
           display: flex;
+
           align-items: center;
+
           gap: 10px;
 
           margin-bottom: 17px;
@@ -1434,12 +1707,14 @@ export default function Portfolio() {
           height: 32px;
 
           display: flex;
+
           align-items: center;
           justify-content: center;
 
           border-radius: 8px;
 
-          background: rgba(155,108,255,.08);
+          background:
+            rgba(155,108,255,.08);
 
           color: var(--accent-soft);
         }
@@ -1454,6 +1729,7 @@ export default function Portfolio() {
 
         .chips {
           display: flex;
+
           flex-wrap: wrap;
 
           gap: 7px;
@@ -1462,18 +1738,24 @@ export default function Portfolio() {
         .chip {
           padding: 6px 9px;
 
-          border: 1px solid var(--border);
+          border:
+            1px solid
+            var(--border);
 
           border-radius: 6px;
 
-          background: rgba(255,255,255,.025);
+          background:
+            rgba(255,255,255,.025);
 
           color: var(--muted-light);
 
-          font-family: "IBM Plex Mono", monospace;
+          font-family:
+            "IBM Plex Mono",
+            monospace;
 
           font-size: 10.5px;
         }
+
 
         /* =====================================================
            PROJECTS
@@ -1481,6 +1763,7 @@ export default function Portfolio() {
 
         .project-list {
           display: flex;
+
           flex-direction: column;
 
           gap: 18px;
@@ -1489,7 +1772,9 @@ export default function Portfolio() {
         .project-card {
           position: relative;
 
-          border: 1px solid var(--border);
+          border:
+            1px solid
+            var(--border);
 
           border-radius: 16px;
 
@@ -1509,9 +1794,11 @@ export default function Portfolio() {
         }
 
         .project-card:hover {
-          transform: translateY(-5px);
+          transform:
+            translateY(-5px);
 
-          border-color: rgba(155,108,255,.3);
+          border-color:
+            rgba(155,108,255,.3);
 
           box-shadow:
             0 25px 70px rgba(0,0,0,.28);
@@ -1530,7 +1817,8 @@ export default function Portfolio() {
 
           border-radius: 50%;
 
-          background: rgba(109,74,255,.12);
+          background:
+            rgba(109,74,255,.12);
 
           filter: blur(35px);
 
@@ -1545,13 +1833,17 @@ export default function Portfolio() {
 
           padding: 12px 17px;
 
-          border-bottom: 1px solid var(--border);
+          border-bottom:
+            1px solid
+            var(--border);
 
-          background: rgba(255,255,255,.018);
+          background:
+            rgba(255,255,255,.018);
         }
 
         .project-window {
           display: flex;
+
           gap: 6px;
         }
 
@@ -1561,25 +1853,30 @@ export default function Portfolio() {
 
           border-radius: 50%;
 
-          background: rgba(255,255,255,.16);
+          background:
+            rgba(255,255,255,.16);
         }
 
         .project-number {
           color: var(--muted);
 
-          font-family: "IBM Plex Mono", monospace;
+          font-family:
+            "IBM Plex Mono",
+            monospace;
 
           font-size: 10px;
         }
 
         .project-body {
-          padding: clamp(23px, 4vw, 32px);
+          padding:
+            clamp(23px, 4vw, 32px);
         }
 
         .project-top {
           display: flex;
 
           justify-content: space-between;
+
           align-items: flex-start;
 
           gap: 20px;
@@ -1589,7 +1886,9 @@ export default function Portfolio() {
 
         .project-title-wrap {
           display: flex;
+
           align-items: center;
+
           gap: 12px;
         }
 
@@ -1604,10 +1903,13 @@ export default function Portfolio() {
           height: 30px;
 
           display: flex;
+
           align-items: center;
           justify-content: center;
 
-          border: 1px solid var(--border);
+          border:
+            1px solid
+            var(--border);
 
           border-radius: 8px;
 
@@ -1622,15 +1924,19 @@ export default function Portfolio() {
         .project-card:hover .project-arrow {
           color: var(--accent-soft);
 
-          border-color: rgba(155,108,255,.35);
+          border-color:
+            rgba(155,108,255,.35);
 
-          transform: translate(2px,-2px);
+          transform:
+            translate(2px,-2px);
         }
 
         .project-period {
           color: var(--muted);
 
-          font-family: "IBM Plex Mono", monospace;
+          font-family:
+            "IBM Plex Mono",
+            monospace;
 
           font-size: 10px;
 
@@ -1660,7 +1966,8 @@ export default function Portfolio() {
         .project-points {
           display: grid;
 
-          grid-template-columns: repeat(2, minmax(0,1fr));
+          grid-template-columns:
+            repeat(2, minmax(0,1fr));
 
           gap: 8px 25px;
 
@@ -1690,18 +1997,24 @@ export default function Portfolio() {
         .project-tech span {
           padding: 5px 8px;
 
-          border: 1px solid rgba(155,108,255,.2);
+          border:
+            1px solid
+            rgba(155,108,255,.2);
 
           border-radius: 6px;
 
           color: var(--accent-soft);
 
-          background: rgba(155,108,255,.035);
+          background:
+            rgba(155,108,255,.035);
 
-          font-family: "IBM Plex Mono", monospace;
+          font-family:
+            "IBM Plex Mono",
+            monospace;
 
           font-size: 10px;
         }
+
 
         /* =====================================================
            EDUCATION
@@ -1721,6 +2034,7 @@ export default function Portfolio() {
           position: absolute;
 
           left: 5px;
+
           top: 7px;
           bottom: 7px;
 
@@ -1751,6 +2065,7 @@ export default function Portfolio() {
           position: absolute;
 
           left: -32px;
+
           top: 4px;
 
           width: 11px;
@@ -1760,16 +2075,21 @@ export default function Portfolio() {
 
           background: var(--bg);
 
-          border: 2px solid var(--accent);
+          border:
+            2px solid
+            var(--accent);
 
           box-shadow:
-            0 0 14px rgba(155,108,255,.35);
+            0 0 14px
+            rgba(155,108,255,.35);
         }
 
         .timeline-period {
           color: var(--accent-soft);
 
-          font-family: "IBM Plex Mono", monospace;
+          font-family:
+            "IBM Plex Mono",
+            monospace;
 
           font-size: 10px;
 
@@ -1801,14 +2121,18 @@ export default function Portfolio() {
 
           border-radius: 6px;
 
-          background: rgba(155,108,255,.06);
+          background:
+            rgba(155,108,255,.06);
 
           color: var(--accent-soft);
 
-          font-family: "IBM Plex Mono", monospace;
+          font-family:
+            "IBM Plex Mono",
+            monospace;
 
           font-size: 10px;
         }
+
 
         /* =====================================================
            CONTACT
@@ -1819,11 +2143,14 @@ export default function Portfolio() {
 
           overflow: hidden;
 
-          padding: clamp(40px, 7vw, 70px);
+          padding:
+            clamp(40px, 7vw, 70px);
 
           text-align: center;
 
-          border: 1px solid var(--border-strong);
+          border:
+            1px solid
+            var(--border-strong);
 
           border-radius: 20px;
 
@@ -1847,9 +2174,11 @@ export default function Portfolio() {
           top: -230px;
           left: 50%;
 
-          transform: translateX(-50%);
+          transform:
+            translateX(-50%);
 
-          background: rgba(109,74,255,.15);
+          background:
+            rgba(109,74,255,.15);
 
           border-radius: 50%;
 
@@ -1860,11 +2189,13 @@ export default function Portfolio() {
 
         .contact-content {
           position: relative;
+
           z-index: 2;
         }
 
         .contact-title {
-          font-size: clamp(31px, 5vw, 52px);
+          font-size:
+            clamp(31px, 5vw, 52px);
 
           letter-spacing: -.05em;
         }
@@ -1872,7 +2203,8 @@ export default function Portfolio() {
         .contact-copy {
           max-width: 570px;
 
-          margin: 16px auto 0;
+          margin:
+            16px auto 0;
 
           color: var(--muted);
 
@@ -1902,13 +2234,16 @@ export default function Portfolio() {
 
           padding: 10px 13px;
 
-          border: 1px solid var(--border);
+          border:
+            1px solid
+            var(--border);
 
           border-radius: 9px;
 
           color: var(--muted-light);
 
-          background: rgba(255,255,255,.02);
+          background:
+            rgba(255,255,255,.02);
 
           font-size: 12px;
 
@@ -1921,9 +2256,11 @@ export default function Portfolio() {
         .contact-method:hover {
           color: var(--text);
 
-          border-color: rgba(155,108,255,.35);
+          border-color:
+            rgba(155,108,255,.35);
 
-          transform: translateY(-2px);
+          transform:
+            translateY(-2px);
         }
 
         .social-row {
@@ -1945,7 +2282,9 @@ export default function Portfolio() {
           align-items: center;
           justify-content: center;
 
-          border: 1px solid var(--border);
+          border:
+            1px solid
+            var(--border);
 
           border-radius: 9px;
 
@@ -1961,12 +2300,16 @@ export default function Portfolio() {
         .social-link:hover {
           color: var(--accent-soft);
 
-          border-color: rgba(155,108,255,.4);
+          border-color:
+            rgba(155,108,255,.4);
 
-          background: rgba(155,108,255,.07);
+          background:
+            rgba(155,108,255,.07);
 
-          transform: translateY(-3px);
+          transform:
+            translateY(-3px);
         }
+
 
         /* =====================================================
            FOOTER
@@ -1974,6 +2317,7 @@ export default function Portfolio() {
 
         footer {
           position: relative;
+
           z-index: 2;
 
           display: flex;
@@ -1987,12 +2331,15 @@ export default function Portfolio() {
             clamp(20px, 5vw, 64px)
             40px;
 
-          border-top: 1px solid var(--border);
+          border-top:
+            1px solid
+            var(--border);
 
           color: var(--muted);
 
           font-size: 11px;
         }
+
 
         /* =====================================================
            TOP BUTTON
@@ -2010,16 +2357,20 @@ export default function Portfolio() {
           height: 42px;
 
           display: flex;
+
           align-items: center;
           justify-content: center;
 
-          border: 1px solid rgba(155,108,255,.3);
+          border:
+            1px solid
+            rgba(155,108,255,.3);
 
           border-radius: 10px;
 
           color: var(--accent-soft);
 
-          background: rgba(12,13,18,.78);
+          background:
+            rgba(12,13,18,.78);
 
           backdrop-filter: blur(12px);
 
@@ -2034,16 +2385,20 @@ export default function Portfolio() {
         }
 
         .top-button:hover {
-          transform: translateY(-3px);
+          transform:
+            translateY(-3px);
 
-          background: rgba(155,108,255,.12);
+          background:
+            rgba(155,108,255,.12);
         }
+
 
         /* =====================================================
            RESPONSIVE
         ===================================================== */
 
         @media (max-width: 979px) {
+
           .hero {
             padding-top: 50px;
           }
@@ -2098,7 +2453,9 @@ export default function Portfolio() {
           }
         }
 
+
         @media (max-width: 700px) {
+
           .hero {
             min-height: auto;
 
@@ -2108,7 +2465,8 @@ export default function Portfolio() {
           }
 
           .hero-name {
-            font-size: clamp(39px, 11vw, 58px);
+            font-size:
+              clamp(39px, 11vw, 58px);
           }
 
           .hero-visual {
@@ -2121,10 +2479,11 @@ export default function Portfolio() {
           }
 
           .hero-image-frame {
-            width: min(270px, 75vw);
+            width:
+              min(270px, 75vw);
           }
 
-          .badge-ai {
+          .badge-rag {
             left: 2px;
             top: 45px;
           }
@@ -2169,7 +2528,9 @@ export default function Portfolio() {
           }
         }
 
+
         @media (max-width: 480px) {
+
           .hero-actions {
             width: 100%;
           }
@@ -2194,38 +2555,66 @@ export default function Portfolio() {
           .about-image-wrap {
             width: 180px;
           }
+
+          .hero-resume {
+            margin-top: 11px;
+          }
         }
 
+
         @media (prefers-reduced-motion: reduce) {
+
           *,
           *::before,
           *::after {
             animation-duration: .001ms !important;
+
             animation-iteration-count: 1 !important;
+
             transition-duration: .001ms !important;
+
             scroll-behavior: auto !important;
           }
         }
 
+
         .site button:focus-visible,
         .site a:focus-visible {
-          outline: 2px solid var(--accent);
+          outline:
+            2px solid
+            var(--accent);
+
           outline-offset: 3px;
         }
+
       `}</style>
+
 
       {/* =====================================================
           BACKGROUND
       ===================================================== */}
 
-      <div className="background-grid" aria-hidden="true" />
-      <div className="background-glow" aria-hidden="true" />
+      <div
+        className="background-grid"
+        aria-hidden="true"
+      />
+
+      <div
+        className="background-glow"
+        aria-hidden="true"
+      />
+
 
       {/* =====================================================
           NAVIGATION
       ===================================================== */}
 
-      <nav className={`nav ${scrolled ? "scrolled" : ""}`}>
+      <nav
+        className={`nav ${
+          scrolled ? "scrolled" : ""
+        }`}
+      >
+
         <button
           className="brand"
           onClick={goHome}
@@ -2237,11 +2626,16 @@ export default function Portfolio() {
             cursor: "pointer",
           }}
         >
-          <span className="brand-mark">NS</span>
+          <span className="brand-mark">
+            NS
+          </span>
+
           Nitish Shukla
         </button>
 
+
         <div className="nav-links">
+
           {NAV_LINKS.map((link) => (
             <button
               key={link.id}
@@ -2250,15 +2644,19 @@ export default function Portfolio() {
               {link.label}
             </button>
           ))}
+
         </div>
+
 
         <a
           className="btn btn-primary nav-cta"
           href="mailto:shuklanitish057@gmail.com"
         >
           <Mail size={15} />
-          Contact 
+
+          Contact
         </a>
+
 
         <button
           className="menu-btn"
@@ -2267,7 +2665,9 @@ export default function Portfolio() {
         >
           <Menu size={20} />
         </button>
+
       </nav>
+
 
       {/* =====================================================
           MOBILE MENU
@@ -2275,6 +2675,7 @@ export default function Portfolio() {
 
       {menuOpen && (
         <div className="mobile-menu">
+
           <button
             className="mobile-close"
             onClick={() => setMenuOpen(false)}
@@ -2282,6 +2683,7 @@ export default function Portfolio() {
           >
             <CloseIcon size={20} />
           </button>
+
 
           {NAV_LINKS.map((link) => (
             <button
@@ -2293,55 +2695,80 @@ export default function Portfolio() {
             </button>
           ))}
 
+
           <a
             className="mobile-mail"
             href="mailto:shuklanitish057@gmail.com"
           >
             <Mail size={15} />
+
             shuklanitish057@gmail.com
           </a>
+
         </div>
       )}
+
 
       {/* =====================================================
           SOCIAL RAIL
       ===================================================== */}
 
       <div className="social-rail">
-        {SOCIALS.map(({ label, href, Icon }) => (
-          <a
-            key={label}
-            href={href}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label={label}
-          >
-            <Icon size={17} />
-          </a>
-        ))}
+
+        {SOCIALS.map(
+          ({ label, href, Icon }) => (
+            <a
+              key={label}
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={label}
+            >
+              <Icon size={17} />
+            </a>
+          )
+        )}
+
       </div>
+
 
       {/* =====================================================
           HERO
       ===================================================== */}
 
-      <header className="hero" id="home">
+      <header
+        className="hero"
+        id="home"
+      >
+
         <div className="wrap">
+
           <div className="hero-grid">
 
-            {/* LEFT */}
+
+            {/* =================================================
+                LEFT
+            ================================================= */}
+
             <div className="hero-left">
+
               <div className="hero-intro">
                 Hello, I'm Nitish
               </div>
 
+
               <h1 className="hero-name">
+
                 <span className="gradient">
                   AI & Full-Stack
                 </span>
+
                 <br />
+
                 Engineer
+
               </h1>
+
 
               <p className="hero-description">
                 I build intelligent, scalable web products —
@@ -2349,14 +2776,18 @@ export default function Portfolio() {
                 multi-tenant applications.
               </p>
 
+
               <div className="hero-actions">
+
                 <button
                   className="btn btn-primary"
                   onClick={() => go("work")}
                 >
                   View my work
+
                   <ArrowUpRight size={16} />
                 </button>
+
 
                 <button
                   className="btn btn-ghost"
@@ -2364,25 +2795,88 @@ export default function Portfolio() {
                 >
                   Get in touch
                 </button>
+
               </div>
+
             </div>
 
-            {/* CENTER IMAGE */}
-           
 
-            {/* RIGHT */}
+            {/* =================================================
+                CENTER IMAGE
+            ================================================= */}
+
+            <div className="hero-visual">
+
+              <div className="hero-orbit">
+                <span className="orbit-dot dot-1" />
+                <span className="orbit-dot dot-2" />
+                <span className="orbit-dot dot-3" />
+              </div>
+
+
+              <div className="hero-glow" />
+
+
+              {/* RAG & AI BADGE */}
+
+              <div className="floating-badge badge-rag">
+
+                <span className="badge-dot" />
+
+                RAG & AI
+
+              </div>
+
+
+              {/* FULL STACK BADGE */}
+
+              <div className="floating-badge badge-stack">
+
+                <Code2 size={12} />
+
+                Full Stack
+
+              </div>
+
+
+              {/* PROFILE IMAGE */}
+
+              <div className="hero-image-frame">
+
+                <img
+                  className="hero-image"
+                  src={profileImage}
+                  alt="Nitish Shukla"
+                />
+
+              </div>
+
+            </div>
+
+
+            {/* =================================================
+                RIGHT
+            ================================================= */}
+
             <div className="hero-right">
+
               <div className="hero-right-label">
                 ASPIRING DEVELOPER
               </div>
 
+
               <h2 className="hero-role">
+
                 Building
+
                 <br />
+
                 <span className="accent">
                   useful software.
                 </span>
+
               </h2>
+
 
               <p className="hero-right-copy">
                 Focused on backend architecture, AI-powered
@@ -2390,15 +2884,45 @@ export default function Portfolio() {
                 user experiences.
               </p>
 
+
+              {/* AVAILABILITY */}
+
               <div className="availability">
+
                 <span className="availability-dot" />
+
                 Open to internships & junior roles
+
               </div>
+
+
+              {/* RESUME */}
+
+              <a
+                href={resume}
+                download="Nitish-Shukla-Resume.pdf"
+                className="hero-resume"
+              >
+
+                <FileDown size={14} />
+
+                Download Resume
+
+              </a>
+
             </div>
+
           </div>
 
+
+          {/* =================================================
+              HERO STATS
+          ================================================= */}
+
           <div className="hero-bottom">
+
             <div className="hero-stat">
+
               <div className="hero-stat-label">
                 Studying
               </div>
@@ -2406,9 +2930,12 @@ export default function Portfolio() {
               <div className="hero-stat-value">
                 B.Tech · Artificial Intelligence
               </div>
+
             </div>
 
+
             <div className="hero-stat">
+
               <div className="hero-stat-label">
                 Shipped
               </div>
@@ -2416,9 +2943,12 @@ export default function Portfolio() {
               <div className="hero-stat-value">
                 3 Full-Stack Projects
               </div>
+
             </div>
 
+
             <div className="hero-stat">
+
               <div className="hero-stat-label">
                 Based in
               </div>
@@ -2426,46 +2956,69 @@ export default function Portfolio() {
               <div className="hero-stat-value">
                 New Delhi, India
               </div>
+
             </div>
+
           </div>
+
         </div>
+
       </header>
+
 
       {/* =====================================================
           ABOUT
       ===================================================== */}
 
-      <section id="about" className="section-block">
+      <section
+        id="about"
+        className="section-block"
+      >
+
         <div className="wrap">
+
           <div className="section-head">
+
             <div className="section-number">
               01 / ABOUT
             </div>
 
-            <h2>A developer who likes to build.</h2>
+            <h2>
+              A developer who likes to build.
+            </h2>
 
             <p>
               Most of my learning happens by turning ideas
               into working software.
             </p>
+
           </div>
 
+
           <div className="about-layout">
+
             <div>
+
               <div className="about-image-wrap">
+
                 <img
                   src={ABOUT_IMAGE}
                   alt="Nitish Shukla"
                   className="about-image"
                 />
+
               </div>
+
 
               <div className="about-label">
                 // still learning, always shipping
               </div>
+
             </div>
 
+
             <div className="about-content">
+
               <p>
                 I'm a third-year{" "}
                 <strong>
@@ -2476,6 +3029,7 @@ export default function Portfolio() {
                 an 8/10 GPA.
               </p>
 
+
               <p>
                 I enjoy working across the whole stack:
                 designing APIs with{" "}
@@ -2484,6 +3038,7 @@ export default function Portfolio() {
                 working with databases, and integrating
                 AI capabilities into practical applications.
               </p>
+
 
               <p>
                 Recently, I've been especially interested in{" "}
@@ -2494,8 +3049,11 @@ export default function Portfolio() {
                 </strong>
               </p>
 
+
               <div className="fact-grid">
+
                 <div className="fact">
+
                   <div className="fact-key">
                     LOCATION
                   </div>
@@ -2503,9 +3061,12 @@ export default function Portfolio() {
                   <div className="fact-value">
                     New Delhi, India
                   </div>
+
                 </div>
 
+
                 <div className="fact">
+
                   <div className="fact-key">
                     EDUCATION
                   </div>
@@ -2513,9 +3074,12 @@ export default function Portfolio() {
                   <div className="fact-value">
                     B.Tech, AI — ABESIT
                   </div>
+
                 </div>
 
+
                 <div className="fact">
+
                   <div className="fact-key">
                     EMAIL
                   </div>
@@ -2523,9 +3087,12 @@ export default function Portfolio() {
                   <div className="fact-value">
                     shuklanitish057@gmail.com
                   </div>
+
                 </div>
 
+
                 <div className="fact">
+
                   <div className="fact-key">
                     PHONE
                   </div>
@@ -2533,34 +3100,53 @@ export default function Portfolio() {
                   <div className="fact-value">
                     +91 88404 07708
                   </div>
+
                 </div>
+
               </div>
+
             </div>
+
           </div>
+
         </div>
+
       </section>
+
 
       {/* =====================================================
           TOOLKIT
       ===================================================== */}
 
-      <section id="toolkit" className="section-block">
+      <section
+        id="toolkit"
+        className="section-block"
+      >
+
         <div className="wrap">
+
           <div className="section-head">
+
             <div className="section-number">
               02 / TOOLKIT
             </div>
 
-            <h2>Technologies I work with.</h2>
+            <h2>
+              Technologies I work with.
+            </h2>
 
             <p>
               From application architecture and APIs to
               interfaces, databases, and developer tooling.
             </p>
+
           </div>
 
+
           <div className="skill-grid">
+
             {SKILLS.map((skill) => {
+
               const Icon = skill.icon;
 
               return (
@@ -2568,72 +3154,110 @@ export default function Portfolio() {
                   className="skill-card"
                   key={skill.group}
                 >
+
                   <div className="skill-heading">
+
                     <div className="skill-icon">
                       <Icon size={16} />
                     </div>
 
-                    <h3>{skill.group}</h3>
+                    <h3>
+                      {skill.group}
+                    </h3>
+
                   </div>
 
+
                   <div className="chips">
+
                     {skill.items.map((item) => (
+
                       <span
                         className="chip"
                         key={item}
                       >
                         {item}
                       </span>
+
                     ))}
+
                   </div>
+
                 </div>
               );
             })}
+
           </div>
+
         </div>
+
       </section>
+
 
       {/* =====================================================
           WORK
       ===================================================== */}
 
-      <section id="work" className="section-block">
+      <section
+        id="work"
+        className="section-block"
+      >
+
         <div className="wrap">
+
           <div className="section-head">
+
             <div className="section-number">
               03 / SELECTED WORK
             </div>
 
-            <h2>Things I've built.</h2>
+            <h2>
+              Things I've built.
+            </h2>
 
             <p>
               Projects spanning AI tooling, real-time SaaS,
               authentication, APIs, and data-heavy dashboards.
             </p>
+
           </div>
 
+
           <div className="project-list">
+
             {PROJECTS.map((project) => (
+
               <article
                 className="project-card"
                 key={project.name}
               >
+
                 <div className="project-bar">
+
                   <div className="project-window">
+
                     <span className="window-dot" />
                     <span className="window-dot" />
                     <span className="window-dot" />
+
                   </div>
+
 
                   <div className="project-number">
                     PROJECT_{project.number}
                   </div>
+
                 </div>
 
+
                 <div className="project-body">
+
                   <div className="project-top">
+
                     <div>
+
                       <div className="project-title-wrap">
+
                         <h3 className="project-title">
                           {project.name}
                         </h3>
@@ -2641,104 +3265,166 @@ export default function Portfolio() {
                         <span className="project-arrow">
                           <ExternalLink size={14} />
                         </span>
+
                       </div>
+
 
                       <div className="project-tag">
                         {project.tag}
                       </div>
+
                     </div>
+
 
                     <div className="project-period">
                       {project.period}
                     </div>
+
                   </div>
+
 
                   <p className="project-blurb">
                     {project.blurb}
                   </p>
 
+
                   <ul className="project-points">
+
                     {project.points.map((point) => (
+
                       <li key={point}>
                         {point}
                       </li>
+
                     ))}
+
                   </ul>
 
+
                   <div className="project-tech">
+
                     {project.tech.map((technology) => (
+
                       <span key={technology}>
                         {technology}
                       </span>
+
                     ))}
+
                   </div>
+
                 </div>
+
               </article>
+
             ))}
+
           </div>
+
         </div>
+
       </section>
+
 
       {/* =====================================================
           BACKGROUND
       ===================================================== */}
 
-      <section id="background" className="section-block">
+      <section
+        id="background"
+        className="section-block"
+      >
+
         <div className="wrap">
+
           <div className="section-head">
+
             <div className="section-number">
               04 / BACKGROUND
             </div>
 
-            <h2>Education & journey.</h2>
+            <h2>
+              Education & journey.
+            </h2>
+
           </div>
 
+
           <div className="timeline">
+
             {EDUCATION.map((education) => (
+
               <div
                 className="timeline-item"
                 key={education.title}
               >
+
                 <div className="timeline-period">
                   {education.period}
                 </div>
+
 
                 <h3>
                   {education.title}
                 </h3>
 
+
                 <div className="timeline-place">
                   {education.place}
                 </div>
 
+
                 <div className="timeline-detail">
                   {education.detail}
                 </div>
+
               </div>
+
             ))}
+
           </div>
+
         </div>
+
       </section>
+
 
       {/* =====================================================
           CONTACT
       ===================================================== */}
 
-      <section id="contact" className="section-block">
+      <section
+        id="contact"
+        className="section-block"
+      >
+
         <div className="wrap">
+
           <div className="contact-panel">
+
             <div className="contact-content">
+
               <div className="section-number">
                 05 / CONTACT
               </div>
 
+
               <h2 className="contact-title">
+
                 Let's build something
+
                 <br />
-                <span style={{ color: "var(--accent)" }}>
+
+                <span
+                  style={{
+                    color: "var(--accent)",
+                  }}
+                >
                   impactful.
                 </span>
+
               </h2>
+
 
               <p className="contact-copy">
                 Open to internships, junior engineering
@@ -2747,32 +3433,45 @@ export default function Portfolio() {
                 exciting, let's talk.
               </p>
 
+
               <div className="contact-methods">
+
                 <a
                   className="contact-method"
                   href="mailto:shuklanitish057@gmail.com"
                 >
                   <Mail size={15} />
+
                   shuklanitish057@gmail.com
                 </a>
+
 
                 <a
                   className="contact-method"
                   href="tel:+918840407708"
                 >
                   <Phone size={15} />
+
                   +91 88404 07708
                 </a>
 
+
                 <span className="contact-method">
+
                   <MapPin size={15} />
+
                   New Delhi, India
+
                 </span>
+
               </div>
 
+
               <div className="social-row">
+
                 {SOCIALS.map(
                   ({ label, href, Icon }) => (
+
                     <a
                       key={label}
                       href={href}
@@ -2783,33 +3482,45 @@ export default function Portfolio() {
                     >
                       <Icon size={18} />
                     </a>
+
                   )
                 )}
+
               </div>
+
             </div>
+
           </div>
+
         </div>
+
       </section>
+
 
       {/* =====================================================
           FOOTER
       ===================================================== */}
 
       <footer>
+
         <span>
           © 2026 Nitish Kumar Shukla
         </span>
 
+
         <span className="mono">
           Built with React · Designed & engineered by Nitish
         </span>
+
       </footer>
+
 
       {/* =====================================================
           BACK TO TOP
       ===================================================== */}
 
       {showTop && (
+
         <button
           className="top-button"
           onClick={goHome}
@@ -2817,9 +3528,10 @@ export default function Portfolio() {
         >
           <ChevronUp size={19} />
         </button>
+
       )}
+
     </div>
   );
 }
 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
