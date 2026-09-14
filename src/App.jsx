@@ -31,7 +31,7 @@ import ABOUT_IMAGE from "./assets/about.png";
 
 const NAV_LINKS = [
   { id: "about", label: "About" },
-  { id: "toolkit", label: "Toolkit" },
+  { id: "toolkit", label: "Tech Stack" },
   { id: "work", label: "Work" },
   { id: "background", label: "Background" },
   { id: "contact", label: "Contact" },
